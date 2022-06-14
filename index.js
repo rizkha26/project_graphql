@@ -8,7 +8,7 @@ const knex = require("knex")({
         password: process.env.PGSQL_PASSWORD
     }
 });
-
+const port = process.env.PORT || 4020;
 
 // Define the schema
 const typeDefs = gql`
@@ -75,5 +75,5 @@ const resolvers = {
 const server = new ApolloServer({ typeDefs, resolvers });
 
 server
-    .listen({ port: 4020 })
+    .listen({ port: port })
     .then(({ url }) => console.log(`🚀 app running at ${url}`));
