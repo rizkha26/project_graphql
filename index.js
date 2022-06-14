@@ -4,8 +4,8 @@ const knex = require("knex")({
     connection: {
         host: 'localhost',
         database: 'xsismart',
-        user: process.env.PGSQL_USER,
-        password: process.env.PGSQL_PASSWORD
+        user: 'postgres',
+        password: '12345678'
     }
 });
 const port = process.env.PORT || 4020;
