@@ -2,7 +2,7 @@ const { ApolloServer, gql } = require("apollo-server");
 const knex = require("knex")({
     client: "pg",
     connection: {
-        host: process.env.PGSQL_HOST,
+        host: 'localhost',
         database: 'xsismart',
         user: process.env.PGSQL_USER,
         password: process.env.PGSQL_PASSWORD
